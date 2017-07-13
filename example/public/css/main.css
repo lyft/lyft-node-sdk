@@ -1,0 +1,160 @@
+/* =============== */
+
+
+/* Document Styles */
+
+
+/* =============== */
+
+html {
+  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+body {
+  color: #000000;
+  font-size: 14px;
+}
+
+input[type="text"] {
+  box-sizing: border-box;
+  display: block;
+  margin: 0;
+  padding: 5px;
+  border: none;
+}
+
+button[type="button"] {
+  display: inline-block;
+  margin: 0;
+  padding: 10px;
+}
+
+.container {
+  width: 640px;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+
+/* === */
+
+
+/* Map */
+
+
+/* === */
+
+#map {
+  width: 100%;
+  height: 256px;
+}
+
+
+/* ========= */
+
+
+/* Locations */
+
+
+/* ========= */
+
+#locations {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+  background-color: #CCCCCC;
+}
+
+#locations>h3 {
+  margin: 0;
+  padding: 0;
+}
+
+#locations>form {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+#locations>form>input[type="text"] {
+  display: block;
+  width: 100%;
+  margin: 5px 0;
+}
+
+
+/* === */
+
+
+/* Log */
+
+
+/* === */
+
+#log {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+  background-color: #CCCCCC;
+}
+
+#log>h3 {
+  margin: 0;
+  padding: 0;
+}
+
+#log>h3>a {
+  text-decoration: none;
+}
+
+#logTarget {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  margin: 5px 0 0 0;
+  padding: 10px;
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: normal;
+  border: none;
+}
+
+
+/* ======== */
+
+
+/* Controls */
+
+
+/* ======== */
+
+#controls {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+  background-color: #CCCCCC;
+}
+
+#controls>h3 {
+  margin: 0;
+  padding: 0;
+}
+
+#controls>form>ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#controls>form>ul>li {
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+
+#controls>form>ul>li>button[type="button"] {
+  margin: 5px;
+}

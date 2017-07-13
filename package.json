@@ -1,0 +1,37 @@
+{
+  "name": "node-lyft",
+  "version": "1.0.3",
+  "description": "The official node SDK for Lyft's APIs",
+  "license": "Apache-2.0",
+  "repository": "lyft/lyft-node-sdk",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha --compilers js:babel-core/register --recursive",
+    "dev": "babel --watch src --out-dir lib",
+    "build": "babel src --out-dir lib",
+    "prepare": "babel src --out-dir lib"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-0"
+    ]
+  },
+  "browser": {
+    "fs": false
+  },
+  "dependencies": {
+    "babel-cli": "^6.24.1",
+    "superagent": "3.5.2"
+  },
+  "devDependencies": {
+    "babel-core": "6.18.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2015-node5": "^1.2.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "expect.js": "~0.3.1",
+    "mocha": "~2.3.4",
+    "sinon": "1.17.3",
+    "util": "^0.10.3"
+  }
+}

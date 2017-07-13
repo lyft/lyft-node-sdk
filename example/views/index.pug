@@ -1,0 +1,120 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="Content-Language", content="en_US")
+    meta(http-equiv="Content-Type", content="text/html; charset=UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Lyft Node SDK Example App
+    link(rel="shortcut icon", href="/favicon.png")
+    link(rel="stylesheet", href="/css/normalize.css")
+    link(rel="stylesheet", href="/css/main.css")
+
+  body
+    div(class="container")
+      div(id="map")
+      div(id="locations")
+        h3 Locations
+        form(id="locationsForm", name="locationsForm")
+          input(
+            type="text",
+            id="locationBegin",
+            name="locationBegin",
+            onchange="javascript:window.MapComponent.onChangeLocationBeginElement.apply(this, arguments);return false;",
+            placeholder="Pick Up Location",
+            title="Pick Up Location"
+          )
+          input(
+            type="text",
+            id="locationEnd",
+            name="locationEnd",
+            onchange="javascript:window.MapComponent.onChangeLocationEndElement.apply(this, arguments);return false;",
+            placeholder="Drop Off Location",
+            title="Drop Off Location"
+          )
+      div(id="controls")
+        h3 Controls
+        form(id="controlsForm", name="controlsForm")
+          ul
+            li
+              button(
+                type="button",
+                onclick="javascript:window.location='/oauth/lyft/authorization';return false;",
+                title="Authorize App"
+              ) Authorize App
+              button(
+                type="button",
+                onclick="javascript:window.location='/oauth/lyft/revocation';return false;",
+                title="Revoke App"
+              ) Revoke App
+            li
+              button(
+                type="button",
+                onclick="javascript:console.log('TODO: Request Ride');return false;",
+                title="Request Ride"
+              ) Request Ride
+            li
+              button(
+                type="button",
+                onclick="javascript:window.ApiComponent.getApiLyftCost(window.MapComponent.getLocationBegin().latitude, window.MapComponent.getLocationBegin().longitude,window.MapComponent.getLocationEnd().latitude, window.MapComponent.getLocationEnd().longitude);return false;",
+                title="Get Cost"
+              ) Get Cost
+              button(
+                type="button",
+                onclick="javascript:window.AppComponent.showDrivers(window.MapComponent.getLocationBegin().latitude, window.MapComponent.getLocationBegin().longitude);return false;",
+                title="Show Drivers"
+              ) Show Drivers
+              button(
+                type="button",
+                onclick="javascript:window.ApiComponent.getApiLyftEta(window.MapComponent.getLocationBegin().latitude, window.MapComponent.getLocationBegin().longitude);return false;",
+                title="Get ETA"
+              ) Get ETA
+              button(
+                type="button",
+                onclick="javascript:window.ApiComponent.getApiLyftRideTypes(window.MapComponent.getLocationBegin().latitude, window.MapComponent.getLocationBegin().longitude);return false;",
+                title="Get Ride Types"
+              ) Get Ride Types
+              button(
+                type="button",
+                onclick="javascript:window.ApiComponent.getApiLyftProfile();return false;",
+                title="Get User Profile"
+              ) Get User Profile
+              button(
+                type="button",
+                onclick="javascript:window.ApiComponent.getApiLyftRides();return false;",
+                title="Get Ride History"
+              ) Get Ride History
+            li
+              button(
+                type="button",
+                onclick="javascript:window.ApiComponent.getApiStatus();return false;",
+                title="Get Local Server Status"
+              ) Get Local Server Status
+            li
+              button(
+                type="button",
+                onclick="javascript:window.ApiComponent.getApiLyftStatus();return false;",
+                title="Get Remote Server Status"
+              ) Get Remote Server Status
+            li
+              button(
+                type="button",
+                onclick="javascript:window.ApiComponent.getApiUsers();return false;",
+                title="Get User Details"
+              ) Get User Details
+      div(id="log")
+        h3 Log
+          | &nbsp;
+          a(
+            href="#",
+            onclick="javascript:window.LogComponent.clear();return false;"
+            title="Clear Log"
+          ) (Clear)
+        form(id="logForm", name="logForm")
+          textarea(id="logTarget", name="logTarget", rows="20")
+    script(src="/js/LogComponent.js")
+    script(src="/js/MapComponent.js")
+    script(src="/js/ApiComponent.js")
+    script(src="/js/AppComponent.js")
+    script(async, defer, src="https://maps.googleapis.com/maps/api/js?callback=window.MapComponent.onGoogleMapsResponse"+(GOOGLE_API_KEY?("&key="+GOOGLE_API_KEY):""))
