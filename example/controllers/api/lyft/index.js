@@ -44,7 +44,7 @@ var publicRequest = function (res, cb) {
     })
     .catch((err) => {
       res
-        .status(preAuthResponse.statusCode)
+        .status(400)
         .json({ meta: { success: false, error: err } });
     })
 };
