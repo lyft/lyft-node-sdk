@@ -57,8 +57,8 @@ Name | Type | Description  | Notes
  **startLat** | **Number**| Latitude of the starting location | 
  **startLng** | **Number**| Longitude of the starting location | 
  **rideType** | **String**| ID of a ride type | [optional] 
- **endLat** | **Number**| Latitude of the ending location | [optional] 
- **endLng** | **Number**| Longitude of the ending location | [optional] 
+ **destinationLat** | **Number**| Latitude of the destation location | 
+ **destinationLng** | **Number**| Longitude of the destation location | 
 
 ### Return type
 
