@@ -1,3 +1,7 @@
+# DEPRECATION NOTICE
+
+Please note that this SDK is deprecated and is no longer officially supported by Lyft.
+
 # Lyft Node SDK
 
 node-lyft is a Node client library for accessing the [Lyft API](https://developer.lyft.com/docs).
